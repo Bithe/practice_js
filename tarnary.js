@@ -19,3 +19,13 @@ price = isLeader === true ?
         price > 1000 ? price / 2 : 0 
     : price + 100;
 console.log(price);
+
+// 
+
+const isPassed = true;
+if(isPassed){
+    console.log('good');
+}
+else{
+    console.log('bad');
+}
