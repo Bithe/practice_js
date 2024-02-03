@@ -25,3 +25,21 @@ else if(bmi>=25 && bmi<=29.9){
 else{
     console.log('obese');
 }
+
+
+const score = 80;
+const frndScore = 45;
+
+if(score >=80){
+    if(frndScore>=80){
+        console.log('lunch');
+    }
+
+    else if(frndScore<80){
+        console.log('gd luck');
+    }
+    
+}
+else{
+    console.log('sad');
+}
