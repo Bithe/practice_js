@@ -78,22 +78,61 @@
 // const s = sumOfNumbers(array);
 // console.log(s);
 
-function evenNum(numbers) {
-  let even = [];
-  let sum =0;
-  for (let number of numbers) {
-    if (number % 2 === 0) {
-      even.push(number);
+// function evenNum(numbers) {
+//   let even = [];
+//   let sum = 0;
+//   for (let number of numbers) {
+//     if (number % 2 === 0) {
+//       even.push(number);
 
-      sum = sum+number;
-    }
-  }
-  return {even, sum};
-}
+//       sum = sum + number;
+//     }
+//   }
+//   return { even, sum };
+// }
 
-let array = [2, 10, 20, 3, 40];
-const even = evenNum(array);
-console.log(even);
+// let array = [2, 10, 20, 3, 40];
+// const even = evenNum(array);
+// console.log(even);
 
+// function multiply(num1, num2, num3, num4) {
+//   const total = num1 * num2 * num3 * num4;
+//   return total;
+// }
+// console.log(multiply(2, 2, 2, 2));
+
+// function oddOrEven(num) {
+//   if (num % 2 === 1) {
+//     const result = num * 2;
+//     // console.log('odd');
+//     return {'odd': result} ;
+//   }
+//   else{
+//     result = num/2;
+//     // return result;
+//     return { type: 'even', value: result};
+//   }
+// }
+
+// console.log(oddOrEven(4));
+
+// function make_avg(array){
+
+// }
+
+
+// let array = [2, 10, 20, 3, 40];
+
+// function getMenu() {
+//     console.log("Burger, Pizza, Pasta");
+//    }
+
+//    console.log(getMenu);
+
+   for (var i = 0; i < 5; i++) {
+    setTimeout(function () {
+     console.log(i);
+  }, 100);
+}   
 
 
