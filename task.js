@@ -43,3 +43,22 @@ if(score >=80){
 else{
     console.log('sad');
 }
+
+
+
+// 
+const num1= 20;
+const num2 = 10;
+let result =0;
+
+
+if(num1>num2){
+    result = num1*2;
+}
+else{
+     result =num1+num2;
+}
+console.log(result);
+
+result = num1>num2 ? num1*2 : num1+num2;
+console.log(result);
