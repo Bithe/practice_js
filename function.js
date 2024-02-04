@@ -22,7 +22,6 @@
 
 // console.log(output);
 
-
 // function size(str){
 //     const strLength = str.length;
 
@@ -37,26 +36,64 @@
 // console.log(size('rayaan'));
 // console.log(size('bithe'));
 
+// function doubleOrTriple(number, double) {
+//   if (double === true) {
+//     const result = number * 2;
+//     return result;
+//   } else {
+//     const result = number * 3;
+//     return result;
+//   }
+// }
 
-function doubleOrTriple(number, double){
-    if(double === true)
-    {
-        const result = number *2;
-        return result;
-    }
-    else{
-        const result = number * 3;
-        return result;
-    }
+// console.log(doubleOrTriple(5, true));
 
+// function array(numbers) {
+//   const len = numbers.length;
+//   return len;
+// }
+// console.log([2, 4, 5, 6]);
+
+// function object(person) {
+//   const age = person.age;
+//   return age;
+// }
+
+// let person = {
+//   age: 24,
+//   date: "10 june 2023",
+// };
+
+// console.log(object(person));
+
+// function sumOfNumbers(numbers) {
+//   let sum = 0;
+//   for (const number of numbers) {
+//     sum = sum + number;
+//   }
+//   return sum;
+// }
+
+// let array = [2, 10, 20];
+// const s = sumOfNumbers(array);
+// console.log(s);
+
+function evenNum(numbers) {
+  let even = [];
+  let sum =0;
+  for (let number of numbers) {
+    if (number % 2 === 0) {
+      even.push(number);
+
+      sum = sum+number;
+    }
+  }
+  return {even, sum};
 }
 
-console.log(doubleOrTriple(5, true));
+let array = [2, 10, 20, 3, 40];
+const even = evenNum(array);
+console.log(even);
 
 
-function array(numbers){
-const len = numbers.length;
-return len;
-}
-console.log([2, 4, 5, 6])
- 
+
