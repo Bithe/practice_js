@@ -73,13 +73,69 @@ const address = [
 ];
 
 function findAddress(address) {
-  let values = [];
-  for (const item of address) {
-    values[item.street] = item;
-    // values.push(item);
-    //   values = Object.values(address.street);
+  let street = [];
+  let house = [];
+  let society = [];
+  for (const addr in address) {
+    street.push(address[addr].street);
+    house.push(address[addr].house);
+    society.push(address[addr].society);
   }
-    return values;
+  return [street, house, society];
 }
 
 console.log(findAddress(address));
+
+// function findAddress(address) {
+//   let values = [];
+//   for (const item of address) {
+//     values[item.street] = item;
+//     // values.push(item);
+//     //   values = Object.values(address.street);
+//   }
+//     return values;
+// }
+
+// console.log(findAddress(address));
+console.log("........................");
+
+const addressNew = [
+  { street: 10, house: "15a", society: "earth" },
+  { street: 1, society: "earth" },
+  { street: 3 },
+];
+
+function findAddress(addressNew) {
+  let output = "";
+  for (const addr of addressNew) {
+    let allAddress = `${addr.street}, ${addr.house || "_"}, ${
+      addr.society || "_"
+    }  `;
+    output += allAddress + "\n";
+  }
+  return output;
+}
+
+console.log(findAddress(addressNew));
+console.log("........................");
+
+function canPay(changeArray, totalDue) {
+  if (changeArray.length == 0) {
+    return "give values";
+  }
+
+  let sum = 0;
+  for (const tk of changeArray) {
+    sum = sum + tk;
+  }
+
+  if (sum < totalDue) {
+    return false;
+  } else {
+    return true;
+  }
+
+  //   return sum;
+}
+
+console.log(canPay([2], 10));
