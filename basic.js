@@ -108,6 +108,8 @@ const addressNew = [
 function findAddress(addressNew) {
   let output = "";
   for (const addr of addressNew) {
+    console.log(addr.street);
+    console.log(addr.house);
     let allAddress = `${addr.street}, ${addr.house || "_"}, ${
       addr.society || "_"
     }  `;
