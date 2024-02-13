@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <section>
+    <h1 id="ray">Rayaan love</h1>
+    <h2>Rayaan baby</h2>
+  </section>
+
+
+
+    <section>
+        <ul>
+            <li class="places">fbdf</li>
+            <li class="places">fvfv</li>
+        </ul>
+    </section>
+
+    <ul class="fruit-container">
+        <li class="fruit">rayaan first</li>
+        <li class="fruit">hossain</li>
+    </ul>
+
+
+    <div id="details">
+        <h3>details</h3>
+        <p>name: js</p>
+    </div>
+
+    <script src="dom.JS"></script>
+
+    <script>
+        // const liCollection = document.getElementsByTagName('li');
+        // for (const li of liCollection) {
+        //     console.log(li.innerText);
+        // }
+
+        const h2Colelction = document.getElementsByTagName('h2');
+        for (const h2 of h2Colelction) {
+            console.log(h2.innerText);
+        }
+
+        const places = document.getElementsByClassName('places');
+        for (const place of places) {
+            console.log(place.innerText);
+        }
+
+        const h1Collection = document.getElementById('ray');
+        h1Collection.innerText = 'rayaan love you';
+
+        const someLi = document.querySelectorAll('.fruit-container li');
+        for (const li of someLi) {
+            console.log(li.innerText);
+        }
+
+        const firstLi = document.querySelector('.fruit-container li');
+            console.log(firstLi.innerText);
+
+            const details = document.getElementById('details');
+            console.log(details.innerHTML);
+            console.log('...........');
+            console.log(details.innerText);
+
+    </script>
+</body>
+
+</html>
