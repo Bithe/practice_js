@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="main-container">
   <section>
     <h1 id="ray">Rayaan love</h1>
     <h2>Rayaan baby</h2>
@@ -15,7 +17,7 @@
 
 
 
-    <section>
+    <section id="place-container">
         <ul>
             <li class="places">fbdf</li>
             <li class="places">fvfv</li>
@@ -28,10 +30,16 @@
     </ul>
 
 
-    <div id="details">
+    <div id="details" class="lg-text">
         <h3>details</h3>
         <p>name: js</p>
     </div>
+
+
+    <ul id="places-list">
+        <li class="bd">shalbon</li>
+        <li class="bd">katabon</li>
+    </ul>
 
     <script src="dom.JS"></script>
 
@@ -62,12 +70,17 @@
         const firstLi = document.querySelector('.fruit-container li');
             console.log(firstLi.innerText);
 
-            const details = document.getElementById('details');
-            console.log(details.innerHTML);
-            console.log('...........');
-            console.log(details.innerText);
+            // const details = document.getElementById('details');
+            // console.log(details.innerHTML);
+            // console.log('...........');
+            // console.log(details.innerText);
 
     </script>
+
+
+    <script src="append.js"></script>
+    <script src="style.js"></script>
+
 </body>
 
 </html>
