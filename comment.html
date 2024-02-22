@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Add yout comment</h1>
+
+    <div id="comment-conatiner">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, cum!</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+
+    <textarea name="" id="comment-text" cols="30" rows="10"></textarea>
+    <button id="post-btn">Post</button>
+
+
+    <script>
+
+
+
+        document.getElementById('post-btn').addEventListener('click', function () {
+
+            //comment field value
+            const commentText = document.getElementById('comment-text');
+            const commentTextValue = commentText.value;
+
+            // create a p where the text will go
+
+            const commentContainer = document.getElementById('comment-conatiner');
+
+            const p = document.createElement('p');
+
+            // which text
+            p.innerText = commentTextValue;
+
+            // add the child to parent
+            commentContainer.append(p);
+
+
+            // clear the text
+            commentText.value = '';
+
+
+
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>

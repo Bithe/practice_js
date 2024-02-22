@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2 id="status">default text</h2>
+    <!-- <h2 >Change default text</h2> -->
+    <button onclick="handleOnclick()">onclick function</button>
+    <button id="event-lis">Event list function</button>
+
+
+
+
+    <h2 id="input-status">Input Field value</h2>
+    <br><input id="input-value" type="text">
+    <br>
+    <br><button id="update-btn">Update</button>
+
+    <script>
+        function handleOnclick() {
+            const status = document.getElementById('status');
+            status.innerText = 'changed onclick status ';
+        }
+
+        document.getElementById('event-lis').addEventListener('click', function () {
+            const status = document.getElementById('status');
+            status.innerText = 'changed by event listener';
+        });
+
+        document.getElementById('update-btn').addEventListener('click', function () {
+            const inputValue = document.getElementById('input-value');
+            const inputText = inputValue.value;
+
+            const inputStatus = document.getElementById('input-status');
+            inputStatus.innerText = inputText;
+            inputValue.value = '';
+        });
+    </script>
+</body>
+
+
+</html>
