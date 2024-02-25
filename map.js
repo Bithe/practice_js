@@ -14,3 +14,32 @@ const numbers = [2,3,4];
 
 const output = numbers.map(n => n*2);
 console.log(output);
+
+
+const selected = numbers.filter(p=>p>2);
+console.log(selected);
+
+const total = numbers.reduce((a,b) => a+b ,0);
+console.log(total);
+
+
+const data = [ 
+    {id:1, name: 'abl', address: 'kk'},
+    {id:1, name: 'abl', address: 'kk'},
+];
+
+
+class product {
+    country = 'ban';
+
+    constructor(){
+        
+    }
+    speak(){
+        console.log(`djdjd ${talk}`)
+    }
+}
+
+const len = new product();
+console.log(len);
+
