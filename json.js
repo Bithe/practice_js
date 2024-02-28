@@ -4,4 +4,9 @@ const obj = {
 };
 const stringifyed = JSON.stringify(obj);
 
-console.log(stringifyed)
+
+const int = JSON.parse(stringifyed);
+
+
+console.log(stringifyed);
+console.log(int);
