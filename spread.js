@@ -20,16 +20,16 @@ const person ={
     p: [1,2,3,4],
 }
 
-const person1 = person;
-const person1 = {...person}
+// const person1 = person;
+// const person1 = {...person}
 
-person1.address = "2njc";
+// person1.address = "2njc";
 
-console.log(person);
-console.log(person1);
+// console.log(person);
+// console.log(person1);
 
-const {name, age, address} = person;
-console.log(name,age);
+// const {name, age, address} = person;
+// console.log(name,age);
 
 const {name, age:boyosh, address} = person;
 console.log(name,boyosh);
