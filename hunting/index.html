@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="max-w-screen-xl mx-auto py-8">
+
+    <header>
+        <h1>Phone</h1>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto space-y-14">
+        <section class="bg-red-100">
+            <input type="text" placeholder="search" class="input input-bordered w-full max-w-xs" id="search-input" />
+
+            <button onclick="searchData()" class="btn btn-accent">Search</button>
+        </section>
+
+
+        <section class="">
+            <div id="phone-container" class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="phone.js"></script>
+
+</body>
+
+</html>
