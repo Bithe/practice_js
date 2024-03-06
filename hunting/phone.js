@@ -1,6 +1,6 @@
 const loadData = async (searchText) => {
   const res = await fetch(
-   `https://openapi.programming-hero.com/api/phones?search=${searchText}`
+    `https://openapi.programming-hero.com/api/phones?search=${searchText}`
   );
 
   const data = await res.json();
@@ -14,7 +14,17 @@ const displayData = (phones) => {
 
   const phoneContainer = document.getElementById("phone-container");
 
-  phoneContainer.textContent = '';
+  phoneContainer.textContent = "";
+
+  const showAllBtn = document.getElementById("show-all-btn");
+
+  if (phones.length > 15) {
+    showAllBtn.classList.remove("hidden");
+  } else {
+    showAllBtn.classList.add("hidden");
+  }
+
+  phones = phones.slice(0, 5);
 
   phones.forEach((phone) => {
     console.log(phone);
@@ -28,20 +38,41 @@ const displayData = (phones) => {
       <h2 class="card-title">${phone.phone_name}</h2>
       <p>If a dog chews shoes whose shoes does he choose?</p>
       <div class="card-actions justify-end">
-        <button class="btn btn-primary">Buy Now</button>
+        <button onClick="'showDetails()'" id="show-details-btn" class="btn btn-primary">Show Details</button>
       </div>
     </div>`;
 
     phoneContainer.appendChild(div);
   });
+
+  toggleSpinner(false);
 };
 
 const searchData = () => {
-  const searchInput = document.getElementById('search-input');
-
-  const searchText = searchInput.value;
-  console.log(searchText);
+  toggleSpinner(true);
+ 
 
   loadData(searchText);
 };
 
+// loading spinner
+
+const toggleSpinner = (isLoading) => {
+  const loadingSpinner = document.getElementById("loading-spinner");
+
+  if (isLoading) {
+    loadingSpinner.classList.remove("hidden");
+  } else {
+    loadingSpinner.classList.add("hidden");
+  }
+};
+
+// show details
+const showDetails = async () => {
+  const showDetailsBtn = document.getElementById("show-details-btn");
+
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/phone/${id}"
+  );
+  const data = await res.json();
+};
