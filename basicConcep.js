@@ -35,3 +35,13 @@ const r = numbers.reduce( (preValue, currentValue) =>{
 
 console.log(r);
 
+numbers.map((item, index) =>{
+console.log("item:", item, "index:", index);
+});
+
+function show(){
+    console.log('rayaan');
+}
+
+function 
+
